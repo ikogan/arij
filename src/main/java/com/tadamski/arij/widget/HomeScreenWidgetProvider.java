@@ -12,7 +12,6 @@ import android.support.v4.app.TaskStackBuilder;
 import android.view.WindowManager;
 import android.widget.RemoteViews;
 
-import com.actionbarsherlock.R;
 import com.tadamski.arij.account.LoginInfoFactory;
 import com.tadamski.arij.account.LoginInfoFactory_;
 import com.tadamski.arij.account.activity.AccountSelectorActivity_;

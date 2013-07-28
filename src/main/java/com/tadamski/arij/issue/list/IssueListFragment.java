@@ -1,11 +1,11 @@
 package com.tadamski.arij.issue.list;
 
 import android.os.Bundle;
+import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import com.actionbarsherlock.app.SherlockListFragment;
 import com.googlecode.androidannotations.annotations.Bean;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.tadamski.arij.R;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 @EFragment(R.layout.issue_list_fragment)
-public class IssueListFragment extends SherlockListFragment {
+public class IssueListFragment extends ListFragment {
 
 
     @Bean

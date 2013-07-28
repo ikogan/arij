@@ -2,7 +2,6 @@ package com.tadamski.arij.account;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.content.Context;
 
 import com.googlecode.androidannotations.annotations.EBean;
 import com.googlecode.androidannotations.annotations.SystemService;

@@ -72,14 +72,14 @@
             <version>2</version>
         </dependency>
         <dependency>
-            <artifactId>play-services</artifactId>
-            <groupId>com.google.android</groupId>
-            <version>v1</version>
-        </dependency>
-        <dependency>
             <artifactId>support-v4</artifactId>
             <groupId>android.support</groupId>
             <version>r13</version>
+        </dependency>
+        <dependency>
+            <artifactId>support-v7-appcompat</artifactId>
+            <groupId>android.support</groupId>
+            <version>r18</version>
         </dependency>
         <!--for displaying nice relative dates -->
         <dependency>
@@ -261,18 +261,18 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>google-play</id>
+                        <id>support-v7-appcompat</id>
                         <phase>validate</phase>
                         <goals>
                             <goal>install-file</goal>
                         </goals>
                         <configuration>
-                            <artifactId>play-services</artifactId>
-                            <groupId>com.google.android</groupId>
-                            <version>v1</version>
+                            <artifactId>support-v7-appcompat</artifactId>
+                            <groupId>android.support</groupId>
+                            <version>r18</version>
                             <packaging>jar</packaging>
                             <generatePom>true</generatePom>
-                            <file>${project.basedir}/libs/google-play-services.jar</file>
+                            <file>${project.basedir}/libs/android-support-v7-appcompat.jar</file>
                         </configuration>
                     </execution>
                 </executions>

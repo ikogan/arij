@@ -7,10 +7,10 @@ import android.appwidget.AppWidgetManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.actionbarsherlock.app.SherlockActivity;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Bean;
 import com.googlecode.androidannotations.annotations.Click;
@@ -34,7 +34,7 @@ import java.util.List;
  * Created by tmszdmsk on 12.07.13.
  */
 @EActivity(R.layout.homescreen_widget_options_activity)
-public class HomescreenWidgetOptionsActivity extends SherlockActivity implements OnAccountsUpdateListener {
+public class HomescreenWidgetOptionsActivity extends ActionBarActivity implements OnAccountsUpdateListener {
 
     @ViewById(R.id.accounts)
     Spinner accountsSpinner;

@@ -7,11 +7,9 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
-import android.support.v4.net.ConnectivityManagerCompat;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
-import com.actionbarsherlock.R;
 import com.tadamski.arij.account.LoginInfoFactory;
 import com.tadamski.arij.account.LoginInfoFactory_;
 import com.tadamski.arij.account.service.LoginInfo;

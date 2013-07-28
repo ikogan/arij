@@ -2,6 +2,7 @@ package com.tadamski.arij.issue.comments.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.ListFragment;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -10,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockListFragment;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Background;
 import com.googlecode.androidannotations.annotations.Bean;
@@ -36,7 +36,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @EFragment
-public class CommentsFragment extends SherlockListFragment {
+public class CommentsFragment extends ListFragment {
     @Bean
     CommentsService commentsService;
     @ViewById(R.id.send_button)

@@ -1,6 +1,7 @@
 package com.tadamski.arij.issue.resource.search;
 
 import com.tadamski.arij.issue.resource.issue.IssuesResultList;
+
 import retrofit.http.Body;
 import retrofit.http.POST;
 

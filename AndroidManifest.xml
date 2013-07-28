@@ -10,7 +10,7 @@
             android:name=".Application">
         <activity
                 android:name=".account.activity.AccountSelectorActivity_"
-                android:theme="@style/Theme.Sherlock.Light">
+                android:theme="@style/Theme.AppCompat.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -19,13 +19,13 @@
         <activity
                 android:launchMode="singleTop"
                 android:name=".issue.list.IssueListActivity_"
-                android:theme="@style/Theme.Sherlock.Light">
+                android:theme="@style/Theme.AppCompat.Light">
         </activity>
         <activity
                 android:launchMode="singleTop"
                 android:name=".issue.single.activity.single.view.IssueActivity_"
                 android:parentActivityName=".issue.list.IssueListActivity_"
-                android:theme="@style/Theme.Sherlock.Light">
+                android:theme="@style/Theme.AppCompat.Light">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
@@ -34,7 +34,7 @@
         <activity
                 android:name=".issue.comments.activity.CommentsActivity_"
                 android:parentActivityName=".issue.single.activity.single.view.IssueActivity_"
-                android:theme="@style/Theme.Sherlock.Light">
+                android:theme="@style/Theme.AppCompat.Light">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
@@ -43,7 +43,7 @@
         <activity
                 android:name=".issue.worklog.list.WorklogsActivity_"
                 android:parentActivityName=".issue.single.activity.single.view.IssueActivity_"
-                android:theme="@style/Theme.Sherlock.Light">
+                android:theme="@style/Theme.AppCompat.Light">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
@@ -51,11 +51,11 @@
         </activity>
         <activity
                 android:name=".account.activity.AddNewAccountActivity_"
-                android:theme="@style/Theme.Sherlock.Light.NoActionBar"
+                android:theme="@style/Theme.AppCompat.Light"
                 android:windowSoftInputMode="adjustResize"/>
         <activity
                 android:name=".issue.worklog.newlog.activity.NewWorklogActivity_"
-                android:theme="@style/Theme.Sherlock.Light"/>
+                android:theme="@style/Theme.AppCompat.Light"/>
 
         <service
                 android:exported="true"
@@ -89,7 +89,7 @@
         <activity
                 android:enabled="@bool/homescreen_widget_enabled"
                 android:name=".widget.options.HomescreenWidgetOptionsActivity_"
-                android:theme="@style/Theme.Sherlock.Light">
+                android:theme="@style/Theme.AppCompat.Light">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
             </intent-filter>

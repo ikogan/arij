@@ -3,12 +3,13 @@ package com.tadamski.arij.account.activity;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.OnAccountsUpdateListener;
+import android.app.ListActivity;
 import android.os.Bundle;
+import android.support.v7.view.ActionMode;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.AbsListView;
-import com.actionbarsherlock.app.SherlockListActivity;
-import com.actionbarsherlock.view.ActionMode;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
+
 import com.google.analytics.tracking.android.EasyTracker;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.ItemClick;
@@ -27,7 +28,7 @@ import java.util.List;
  * @author tmszdmsk
  */
 @EActivity
-public class AccountSelectorActivity extends SherlockListActivity implements OnAccountsUpdateListener {
+public class AccountSelectorActivity extends ListActivity implements OnAccountsUpdateListener {
 
     @SystemService
     AccountManager accountManager;
@@ -64,7 +65,7 @@ public class AccountSelectorActivity extends SherlockListActivity implements OnA
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.account_selector_menu, menu);
+        getMenuInflater().inflate(R.menu.account_selector_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -98,7 +99,8 @@ public class AccountSelectorActivity extends SherlockListActivity implements OnA
     @ItemLongClick(android.R.id.list)
     void onAccountLongClick(final int position) {
         getListView().setItemChecked(position, true);
-        getSherlock().startActionMode(new ActionMode.Callback() {
+        /**
+        startSupportActionMode(new ActionMode.Callback() {
 
             @Override
             public boolean onCreateActionMode(ActionMode mode, Menu menu) {
@@ -131,6 +133,7 @@ public class AccountSelectorActivity extends SherlockListActivity implements OnA
                 getListView().setItemChecked(getListView().getCheckedItemPosition(), false);
             }
         });
+         */
     }
 
     private void removeAccount(LoginInfo loginInfo) {

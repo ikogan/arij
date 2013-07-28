@@ -1,15 +1,16 @@
 package com.tadamski.arij.issue.worklog.list;
 
+
 import android.os.Bundle;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.ListAdapter;
 
-import com.actionbarsherlock.app.SherlockListFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
 import com.googlecode.androidannotations.annotations.Background;
 import com.googlecode.androidannotations.annotations.Bean;
 import com.googlecode.androidannotations.annotations.EFragment;
@@ -35,7 +36,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @EFragment
-public class WorklogsFragment extends SherlockListFragment {
+public class WorklogsFragment extends ListFragment {
     @Bean
     WorklogService worklogService;
     @ViewById(R.id.loading)

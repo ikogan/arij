@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:arij="http://schemas.android.com/apk/res-auto" >
     <item
             android:id="@+id/menu_item_worklog"
             android:title="@string/worklog"
-            android:showAsAction="ifRoom|withText"
+            arij:showAsAction="ifRoom|withText"
             />
     <item
             android:id="@+id/menu_item_start_work"
             android:title="@string/start_work"
-            android:showAsAction="ifRoom|withText"
+            arij:showAsAction="ifRoom|withText"
             />
     <item
             android:id="@+id/menu_item_assign_to_me"
             android:title="Assign to me"
-            android:showAsAction="ifRoom|withText|collapseActionView"
+            arij:showAsAction="ifRoom|withText|collapseActionView"
             />
 </menu>

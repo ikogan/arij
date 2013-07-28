@@ -2,9 +2,9 @@ package com.tadamski.arij.issue.single.activity.single.view;
 
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBarActivity;
 import android.view.WindowManager;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
@@ -20,7 +20,7 @@ import com.tadamski.arij.issue.worklog.list.WorklogsActivity;
 import com.tadamski.arij.util.analytics.Tracker;
 
 @EActivity(R.layout.issue)
-public class IssueActivity extends SherlockFragmentActivity implements IssueFragment.IssueFragmentListener {
+public class IssueActivity extends ActionBarActivity implements IssueFragment.IssueFragmentListener {
 
     private static final String TAG = IssueActivity.class.getName();
     @Extra

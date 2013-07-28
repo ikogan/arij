@@ -1,6 +1,6 @@
 package com.tadamski.arij.issue.worklog.newlog.activity;
 
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
@@ -17,7 +17,7 @@ import java.util.Date;
  * @author tmszdmsk
  */
 @EActivity(R.layout.worklog_new_activity)
-public class NewWorklogActivity extends FragmentActivity implements NewWorklogFragment.WorkLoggedListener {
+public class NewWorklogActivity extends ActionBarActivity implements NewWorklogFragment.WorkLoggedListener {
 
     public static final int REQUEST_CODE_LOG = 125;
     private static final String TAG = NewWorklogActivity.class.getName();

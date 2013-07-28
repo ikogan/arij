@@ -7,14 +7,14 @@ package com.tadamski.arij.issue.single.activity.single.view;
 import android.app.Activity;
 import android.app.NotificationManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
 import com.googlecode.androidannotations.annotations.Background;
 import com.googlecode.androidannotations.annotations.Bean;
 import com.googlecode.androidannotations.annotations.EFragment;
@@ -51,7 +51,7 @@ import java.util.Date;
  * @author tmszdmsk
  */
 @EFragment(R.layout.issue_fragment)
-public class IssueFragment extends SherlockFragment {
+public class IssueFragment extends Fragment {
 
     private static final String TAG = IssueFragment.class.getName();
     @Bean

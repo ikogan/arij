@@ -1,8 +1,8 @@
 package com.tadamski.arij.issue.worklog.list;
 
 import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBarActivity;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
@@ -20,7 +20,7 @@ import com.tadamski.arij.util.analytics.Tracker;
  * Created by tmszdmsk on 07.07.13.
  */
 @EActivity(R.layout.worklogs)
-public class WorklogsActivity extends SherlockFragmentActivity {
+public class WorklogsActivity extends ActionBarActivity {
 
     public static final int REQUEST_WORKLOG = 35345;
     public static final int RESULT_UPDATED = 23;

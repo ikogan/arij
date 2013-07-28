@@ -1,8 +1,8 @@
 package com.tadamski.arij.issue.comments.activity;
 
 import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBarActivity;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
@@ -18,7 +18,7 @@ import com.tadamski.arij.util.analytics.Tracker;
  * Created by tmszdmsk on 07.07.13.
  */
 @EActivity(R.layout.comments)
-public class CommentsActivity extends SherlockFragmentActivity implements CommentsFragment.CommentsFragmentListener {
+public class CommentsActivity extends ActionBarActivity implements CommentsFragment.CommentsFragmentListener {
 
     public static final int REQUEST_SHOW_COMMENTS = 1235;
     public static final int RESULT_UPDATE = 12;

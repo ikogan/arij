@@ -2,12 +2,12 @@ package com.tadamski.arij.issue.list;
 
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Bean;
 import com.googlecode.androidannotations.annotations.EActivity;
@@ -25,7 +25,7 @@ import com.tadamski.arij.issue.resource.IssueService;
 import com.tadamski.arij.util.analytics.Tracker;
 
 @EActivity(R.layout.issue_list_activity)
-public class IssueListActivity extends SherlockFragmentActivity {
+public class IssueListActivity extends ActionBarActivity {
 
     @FragmentById(R.id.fragment)
     IssueListFragment fragment;
