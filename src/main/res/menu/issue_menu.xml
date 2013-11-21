@@ -12,8 +12,12 @@
             android:showAsAction="ifRoom|withText"
             />
     <item
+            android:id="@+id/menu_item_favorite"
+            android:title="@string/favorite"
+            android:showAsAction="ifRoom|withText" />
+    <item
             android:id="@+id/menu_item_assign_to_me"
-            android:title="Assign to me"
+            android:title="@string/assign_to_me"
             android:showAsAction="ifRoom|withText|collapseActionView"
             />
 </menu>

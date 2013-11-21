@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.view.Menu;
@@ -42,7 +43,9 @@ import com.tadamski.arij.issue.worklog.newlog.notification.NewWorklogNotificatio
 import com.tadamski.arij.issue.worklog.timetracking.TimeTrackingSummaryView;
 import com.tadamski.arij.issue.worklog.timetracking.TimeTrackingSummaryView_;
 import com.tadamski.arij.util.analytics.Tracker;
+import com.tadamski.arij.util.database.DatabaseOpenHelper;
 
+import java.sql.SQLException;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -69,6 +72,7 @@ public class IssueFragment extends SherlockFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setHasOptionsMenu(true);
         setRetainInstance(true);
         setMenuVisibility(false);
@@ -172,6 +176,23 @@ public class IssueFragment extends SherlockFragment {
         Tracker.sendEvent("IssueFragment", "startWorkClicked", null, null);
         if (loadedIssue != null)
             NewWorklogNotification.create(getActivity().getApplicationContext(), loadedIssue, new Date(), actualLoginInfo);
+    }
+
+    @OptionsItem(R.id.menu_item_favorite)
+    void onFavoriteClicked() {
+        Tracker.sendEvent("IssueFragment", "favoriteClicked", null, null);
+        if(loadedIssue != null) {
+            try {
+                if(issueService.favoriteIssue(actualIssueKey)) {
+                    Toast.makeText(getActivity(), getString(R.string.issue_favorited), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getActivity(), getString(R.string.issue_already_favorited), Toast.LENGTH_SHORT).show();
+                }
+            } catch (SQLException ex) {
+                Toast.makeText(getActivity(), ex.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+
+        }
     }
 
     @OptionsItem(R.id.menu_item_assign_to_me)

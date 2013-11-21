@@ -30,6 +30,10 @@
     <string name="quick_search">Quick search</string>
     <string name="filters">Filters</string>
     <string name="no_issues_found">No issues found</string>
+    <string name="issue_favorited">Issue added to favorites</string>
+    <string name="issue_already_favorited">Issue is already a favorite</string>
+    <string name="favorite">Favorite</string>
+    <string name="assign_to_me">Assign to Me</string>
     <string-array name="login_protocols">
         <item>https://</item>
         <item>http://</item>
